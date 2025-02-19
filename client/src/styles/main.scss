@@ -1,0 +1,379 @@
+/* src/styles/main.scss */
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  background-color: #f7f7f7;
+  color: #333;
+}
+
+.app {
+  &__main {
+    padding: 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+}
+
+/* Header */
+.header {
+  background-color: #007bff;
+  color: #fff;
+  padding: 1rem;
+
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  &__logo a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.5rem;
+  }
+
+  &__nav {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  &__link {
+    color: #fff;
+    text-decoration: none;
+  }
+
+  &__logout-btn {
+    background: none;
+    border: 1px solid #fff;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+  }
+
+  &__user {
+    font-weight: bold;
+  }
+}
+
+/* Authentication Forms */
+.auth {
+  max-width: 400px;
+  margin: 2rem auto;
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__title {
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+
+  &__group {
+    margin-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__label {
+    margin-bottom: 0.5rem;
+  }
+
+  &__input {
+    padding: 0.5rem;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+  }
+
+  &__button {
+    padding: 0.75rem;
+    background-color: #007bff;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 3px;
+    font-size: 1rem;
+  }
+
+  &__error {
+    color: #d9534f;
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+
+  &__text {
+    text-align: center;
+    margin-top: 1rem;
+  }
+}
+
+/* Dashboard */
+.dashboard {
+  &__title {
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+
+  &__error {
+    color: #d9534f;
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+}
+
+/* Task Form */
+.task-form {
+  background: #fff;
+  padding: 1rem;
+  border-radius: 5px;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+
+  &__title {
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+
+  &__group {
+    margin-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__label {
+    margin-bottom: 0.5rem;
+  }
+
+  &__input {
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    font-size: 1rem;
+  }
+
+  &__button {
+    padding: 0.75rem;
+    background-color: #28a745;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 3px;
+    font-size: 1rem;
+    width: 100%;
+  }
+
+  &__error {
+    color: #d9534f;
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+}
+
+/* Task List */
+.task-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+  &__empty {
+    text-align: center;
+    padding: 1rem;
+    color: #777;
+  }
+
+  &__item {
+    background: #fff;
+    padding: 1rem;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__content {
+    margin-bottom: 0.5rem;
+  }
+
+  &__text {
+    margin: 0 0 0.5rem 0;
+    font-size: 1.1rem;
+  }
+
+  &__status {
+    font-size: 0.9rem;
+    color: #555;
+  }
+
+  &__date {
+    font-style: italic;
+  }
+
+  &__actions {
+    display: flex;
+    gap: 1rem;
+    margin-top: 0.5rem;
+  }
+
+  &__btn {
+    padding: 0.5rem 1rem;
+    border: none;
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 3px;
+    font-size: 0.9rem;
+  }
+
+  &__btn--delete {
+    background-color: #d9534f;
+  }
+}
+
+/* Responsive Design */
+@media (min-width: 768px) {
+  .header__container {
+    flex-wrap: nowrap;
+  }
+
+  .dashboard {
+    &__title {
+      font-size: 2rem;
+    }
+  }
+
+  .task-list__item {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .task-list__content {
+    flex: 1;
+  }
+
+  .task-list__actions {
+    margin-top: 0;
+  }
+}
+.modal {
+  background: #fff;
+  padding: 2rem;
+  max-width: 500px;
+  margin: 2rem auto;
+  border-radius: 5px;
+  position: relative;
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal__actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.modal__btn {
+  padding: 0.5rem 1rem;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.modal__btn--confirm {
+  background-color: #d9534f;
+  color: #fff;
+}
+
+.modal__btn--cancel {
+  background-color: #ccc;
+  color: #333;
+}
+/* Modal Overlay for Completion Message */
+.completion-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7); // dark overlay
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.completion-modal {
+  background: #fff;
+  border-radius: 8px;
+  padding: 2rem;
+  max-width: 500px;
+  width: 90%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+.completion-modal__header {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.completion-modal__body {
+  margin-bottom: 1.5rem;
+}
+
+.completion-modal__input {
+  width: 100%;
+  padding: 0.75rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-bottom: 1rem;
+}
+
+.completion-modal__actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+}
+
+.completion-modal__btn {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.completion-modal__btn--confirm {
+  background-color: #28a745;
+  color: #fff;
+}
+
+.completion-modal__btn--cancel {
+  background-color: #ccc;
+  color: #333;
+}
