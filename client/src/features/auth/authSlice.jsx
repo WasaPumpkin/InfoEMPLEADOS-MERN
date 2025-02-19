@@ -2,7 +2,8 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
 
-const API_URL = 'http://localhost:4000/api/users'; // Update this URL
+const API_URL = 'https://infoempleados-3q11.onrender.com/api/users'; // Production backend API URL
+
 
 
 // Retrieve user info from localStorage if available

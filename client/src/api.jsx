@@ -8,9 +8,10 @@
 // export default baseQuery;
 
 // api.js
+// api.js
 import axios from 'axios';
 
-const BASE_URL = 'http://localhost:4000'; // Backend API URL
+const BASE_URL = 'https://infoempleados-3q11.onrender.com'; // Production backend API URL
 
 const baseQuery = axios.create({
   baseURL: BASE_URL,
