@@ -105,7 +105,7 @@ import axios from 'axios';
 import { createTask } from '../features/tasks/taskSlice';
 
 // Hardcoded production backend URL
-const BASE_URL = 'http://localhost:4000';
+const BASE_URL = 'https://infoempleados-3q11.onrender.com';
 
 const TaskForm = () => {
   const [text, setText] = useState('');
